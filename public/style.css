@@ -1,0 +1,217 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  background: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  width: min(900px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.app-logo {
+  width: 88px;
+  height: 88px;
+  border-radius: 18px;
+  flex-shrink: 0;
+}
+
+.eyebrow {
+  color: #0f766e;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+.status-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.status {
+  display: inline-block;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #dcfce7;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.status-secondary {
+  background: #e2e8f0;
+}
+
+.status-offline {
+  background: #fee2e2;
+}
+
+.panel {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 20px;
+}
+
+.hint {
+  color: #64748b;
+  margin-top: -6px;
+}
+
+.field {
+  margin: 20px 0;
+}
+
+.field > label,
+.field > .field-label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.radio-option {
+  display: block;
+  margin: 9px 0;
+}
+
+.actions {
+  margin-top: 24px;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 16px;
+}
+
+button[type="submit"] {
+  background: #0f766e;
+  color: white;
+}
+
+#sync-button {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+#sync-button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.submission {
+  border-top: 1px solid #e2e8f0;
+  padding: 16px 0;
+}
+
+.submission:first-child {
+  margin-top: 8px;
+}
+
+.submission-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.submission p {
+  margin: 7px 0;
+}
+
+.submission-id {
+  overflow-wrap: anywhere;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge-pending {
+  background: #fef3c7;
+}
+
+.badge-synced {
+  background: #dcfce7;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+.empty {
+  color: #64748b;
+}
+
+code {
+  font-size: 0.9em;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    align-items: flex-start;
+  }
+
+  .app-logo {
+    width: 68px;
+    height: 68px;
+  }
+
+  .section-header {
+    flex-direction: column;
+  }
+}

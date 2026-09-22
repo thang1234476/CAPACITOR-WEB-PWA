@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>VKU Field Survey</title>
+
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0f766e" />
+
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <main class="app">
+    <header class="hero">
+      <img class="app-logo" src="/icons/icon-192.png" alt="VKU Field Survey" />
+
+      <div>
+        <p class="eyebrow">WEEK 4 — OFFLINE-FIRST DEMO</p>
+        <h1>VKU Field Survey</h1>
+
+        <div class="status-row">
+          <span id="network-status" class="status"></span>
+          <span id="sync-summary" class="status status-secondary"></span>
+        </div>
+      </div>
+    </header>
+
+    <section class="panel">
+      <h2 id="form-title"></h2>
+      <p class="hint">
+        Form được sinh động từ schema. Hãy thử đổi Tình trạng giữa
+        “Tốt” và “Hư hỏng” để quan sát skip logic.
+      </p>
+
+      <form id="survey-form"></form>
+    </section>
+
+    <section class="panel">
+      <div class="section-header">
+        <div>
+          <h2>Submissions trên thiết bị</h2>
+          <p class="hint">
+            Dữ liệu bên dưới đọc trực tiếp từ IndexedDB.
+          </p>
+        </div>
+
+        <button id="sync-button" type="button">
+          Sync pending
+        </button>
+      </div>
+
+      <div id="submission-list"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Native Evidence</h2>
+
+      <button id="camera-button" type="button">
+        Chụp ảnh hiện trường
+      </button>
+
+      <button id="location-button" type="button">
+        Lấy vị trí hiện tại
+      </button>
+
+      <p id="photo-status">Chưa có ảnh.</p>
+
+      <img id="photo-preview" alt="Ảnh hiện trường" hidden />
+
+      <p id="location-status">
+        Chưa có vị trí.
+      </p>
+
+      <p id="location-coordinates" hidden></p>
+    </section>
+  </main>
+
+  <script type="module" src="/src/app.js"></script>
+</body>
+
+</html>
